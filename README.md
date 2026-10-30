@@ -60,7 +60,7 @@ figures. Re-running a model call needs the three command-line harnesses and the 
 | `manuscript/figures/src/` | scripts that draw Figs. 2–5, Extended Data Figs. 1–9 and Supplementary Fig. 1 |
 | `manuscript/V9/` | supplementary tables (CSV), the source data of every figure, and the scripts that draw Fig. 1 and panel d of Fig. 4 (`scripts/`; panels a–c come from `manuscript/figures/src/fig4_contract.py`). Folder names `V2` and `V9` are the authors' draft numbers, kept because the scripts use these paths |
 | `manuscript/V2/supplementary_tables/` | the surface-cue table of the earlier collection, an input of `stats_v2.py` |
-| `manuscript/6.1/` | the submitted paper's source data and Supplementary Tables (CSV) under its display numbering, and the scripts that draw Figs. 1 and 4 and panel d of Fig. 6 and write Tables S33–S35. `FILES.md` names the origin of every file; most are copies of `manuscript/V9/` outputs, which use an earlier display numbering. `6.1` is also an authors' draft number |
+| `manuscript/6.1/` | the submitted paper's source data and Supplementary Tables (CSV) under its display numbering, and the scripts that draw Figs. 1 and 4 and panel d of Fig. 6 and write Tables S33–S35 and the source data of Table 3 and Supplementary Fig. 2. `FILES.md` names the origin of every file; most are copies of `manuscript/V9/` outputs, which use an earlier display numbering. `6.1` is also an authors' draft number |
 | `x10/` | the stated-limit experiment: `data/` (the 80 new beams and disks, answer keys with the certified limits that the reference sheets state, build manifest, one example prompt per arm and family), `plan/` (the frozen plan with its decision rule, its freeze hashes, and `deviations.md`, the operational log), `runs/` (15 waves, `records.jsonl` and `wave.json`), `analysis/` (graded results and reply evidence) and `scripts/` (item builder, prompt arms, runner, grader) |
 | `evidence/` | setup probes of the tool server and the Codex isolation note |
 | `tests/` | reference-solver tests |
@@ -81,6 +81,11 @@ Verification of this release (2026-10-29, same machine and interpreters as below
 stripped matched every hash in `CHECKSUMS_ORIGINAL.sha256`, and `reproduce_all.py --quick`, including the
 stated-limit grading and the scripts in `manuscript/6.1/scripts/`, ran without error: of 197 output files, one changed,
 `manuscript/evidence/MANIFEST.sha256`, for the reason given below. The full run was not repeated for this release.
+
+Update of 2026-10-30: `manuscript/6.1/scripts/source_data_extra.py` and the three source-data files it writes (Table 3
+and Supplementary Fig. 2) were added, and the description at the top of `manuscript/6.1/scripts/pubstyle.py` was
+corrected. In a clean copy with the canary stripped, every hash in `CHECKSUMS_ORIGINAL.sha256` matched, and the new
+script rewrote its three files with identical bytes; the quick run was not repeated.
 
 Verification of the first release build, before the stated-limit experiment (2026-10-25, Windows 11, 12 of 20 CPU cores; Python 3.12.13 with NumPy 2.4.3, SciPy 1.17.1,
 scikit-learn 1.8.0, pandas 3.0.2 and SymPy 1.14.0; figures with Python 3.12.0 and Matplotlib 3.10.8). A clean copy of

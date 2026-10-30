@@ -33,7 +33,8 @@ PACKAGE = ["build_s24.py", "build_contract_tables.py", "build_tax_table.py", "bu
 FIGURES = ["fig2_problems.py", "fig2_regimes.py", "fig3_margin.py", "fig3_reading.py", "fig4_disk.py",
            "fig4_contract.py", "fig5_paired.py", "ed1_effort.py", "supp_figures.py"]
 PRESENTATION = ["fig1_architecture.py", "rebuild_presentation.py"]
-PAPER = ["rebuild_presentation.py", "x10_presentation.py"]      # manuscript/6.1: Figs. 1, 4 and 6, Tables S33-S35
+PAPER = ["rebuild_presentation.py", "x10_presentation.py",      # manuscript/6.1: Figs. 1, 4 and 6, Tables S33-S35,
+         "source_data_extra.py"]                                # source data of Table 3 and Supplementary Fig. 2
 OUTPUTS = ["manuscript/analysis", "manuscript/evidence", "manuscript/tables", "manuscript/V9/supplementary_tables",
            "manuscript/V9/source_data", "x10/analysis",
            "manuscript/6.1/supplementary_tables", "manuscript/6.1/source_data"]
